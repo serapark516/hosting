@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn_img_size {
+            width: 30px;
+            height: 30px;
+        }
+
+        button {
+            border: none;
+            background: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <label for="named">성명 :</label>
+        <input type="text" id="named">
+    </div>
+
+    <div>
+        <label for="replyTo">연락처 :</label>
+        <input type="text" id="replyTo">
+    </div>
+
+    <div>
+        <label>직업 :
+            <input type="text">
+        </label>
+    </div>
+
+    <br>
+
+    <form action="server.html" name="studentInfo">
+        <div>
+            <label for="named">이름 :</label>
+            <input type="text" id="named" name="named" minlength="3" maxlength="5">
+        </div>
+
+        <div>
+            <label for="stNum">학번 :</label>
+            <input type="text" id="stNum" name="stNum" placeholder="2자리만 입력 가능" minlength="2" maxlength="2">
+        </div>
+
+        <input type="submit" name="transBtn" value="전송">
+
+    </form>
+
+    <br>
+    <!--
+    required 유효성 검사
+-->
+    <form action="server.html" name="studentInfo" method="get">
+        <div>
+            <label for="named">이름 :</label>
+            <input type="text" id="named" name="named" minlength="3" maxlength="5" required>
+        </div>
+
+        <div>
+            <label for="stNum">학번 :</label>
+            <input type="text" id="stNum" name="stNum" placeholder="2자리만 입력 가능" minlength="2" maxlength="2" required>
+        </div>
+
+        <input type="submit" name="transBtn" value="전송">
+    </form>
+
+    <!--
+        novalidate 유효성 검사 해제
+    -->
+
+    <br>
+
+    <form action="server.html" name="studentInfo" method="get" novalidate>
+        <div>
+            <label for="named">이름 :</label>
+            <input type="text" id="named" name="named" minlength="3" maxlength="5" required>
+        </div>
+
+        <div>
+            <label for="stNum">학번 :</label>
+            <input type="text" id="stNum" name="stNum" placeholder="2자리만 입력 가능" minlength="2" maxlength="2" required>
+        </div>
+
+        <input type="submit" name="transBtn" value="전송">
+    </form>
+
+    <br>
+
+    <!--
+        post
+        method="post"
+    -->
+
+    <form action="server.html" name="studentInfo" method="post">
+        <div>
+            <label for="named">이름 :</label>
+            <input type="text" id="named" name="named" minlength="3" maxlength="5" required>
+        </div>
+
+        <div>
+            <label for="stNum">학번 :</label>
+            <input type="text" id="stNum" name="stNum" placeholder="2자리만 입력 가능" minlength="2" maxlength="2" required>
+        </div>
+
+        <input type="submit" name="transBtn" value="전송">
+    </form>
+
+    <br>
+    <!--
+    버튼, 이미지 삽입
+-->
+    <form action="server.html" name="studentInfo">
+        <div>
+            <label for="named">이름 :</label>
+            <input type="text" id="named" name="named" minlength="3" maxlength="5" required>
+        </div>
+
+        <div>
+            <label for="stNum">학번 :</label>
+            <input type="text" id="stNum" name="stNum" placeholder="2자리만 입력 가능" minlength="2" maxlength="2" required>
+        </div>
+
+        <input type="image" class="btn_img_size" src="/image/submit.png" alt="전송 버튼">
+    </form>
+
+    <form action="server.html" method="post" name="parents">
+        <div>
+            <label>아빠 :
+                <input type="text" name="father" placeholder="아빠이름" minlength="3" maxlength="5" required>
+            </label>
+        </div>
+
+        <div>
+            <label>엄마 :
+                <input type="text" name="mother" placeholder="엄마이름" minlength="3" maxlength="5" required>
+            </label>
+        </div>
+
+        <button>
+            <img class="btn_img_size" src="/image/submit.png" alt="전송 버튼">
+        </button>
+
+        <button>
+            <img class="btn_img_size" src="/image/cancel.png" alt="초기화 버튼">
+        </button>
+    </form>
+
+    <!--
+        그룹화된 fieldset 에 대한 제목(caption)을 표시.
+
+    -->
+
+    
+
+</body>
+
+</html>
